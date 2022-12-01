@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+/*
+Aurto: Leonardo Rivera.
+Email: leonardorivera1004@gmail.com
+Nota: Aplicacion realizada con la finalidad de practicar diferentes Funcionalidades de javascript, html y css.
+
+
+*/
+
+:root{
+
+    --backgroud-color: rgb(217, 85, 80);
+    --background-reloj: rgba(255, 255, 255, 0.1);
+
+}
+section{
+    margin-bottom: 1rem;
+}
+
+body{
+
+    background-color: var(--backgroud-color);
+}
+#barra{
+    border-bottom: 0.05rem solid rgba(36, 35, 35, 0.425);
+    font-family: 'Varela Round', sans-serif;
+    
+    margin-bottom: 2rem;
+    
+
+}
+#container-reloj{
+    border-radius: 8px;
+    background-color:  var(--background-reloj);
+
+
+}
+#reloj{
+    font-weight: bold;
+    font-size: 8rem;
+    
+    
+}
+
+.btn-decore:hover{
+    border-radius: 1px solid white;
+}
+
+
+.oction{
+    
+    margin-top: 10px;
+
+}
+
+.oction-active{
+    font-weight: bold;
+    font-size: small;
+    background-color:rgba(138, 55, 53, 0.5) ;
+    border-radius: 5px;
+    margin-top: 10px;
+    
+}
+.var-btn{
+    font-size: small;
+    opacity: 0.9;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+
+}
+
+.btn-start{
+    height: 4rem;
+    background-color: white;
+    border-radius: 5px ;
+    border-style:none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color:rgb(217, 85, 80);
+    
+    margin-bottom: 2rem;
+    padding-top: 0px;
+    box-shadow: rgb(235 235 235) 0px 6px 0px;
+    
+}
+.btn-start-on{
+    margin-top: 6px;
+    box-shadow:none;
+    
+}
+
+
+/*------------------------------------------------------------------------*/
+
+
+@media(max-width:430px){
+    .btn-start{
+        background-color: white;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 0.8rem;
+        color:rgb(217, 85, 80);
+    
+    
+    }
+}
+
+@media(max-width:170px){
+    .btn-start{
+        background-color: white;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 0.7rem;
+        color:rgb(217, 85, 80);
+    
+    
+    }
+}
+
+
+
+@media(max-width:576px){
+    #reloj{
+        font-weight: bold;
+        font-size: 12vh;
+
+    }
+
+}
+
+@media(max-width:360px){
+    #reloj{
+        font-weight: bold;
+        font-size: 25vw;
+
+    }
+
+
+}
