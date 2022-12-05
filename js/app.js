@@ -215,14 +215,18 @@ const startQueries = () => {
     
     let validar_m = document.getElementById('inputMinute').value;
     let validar_s = document.getElementById('inputseconds').value;
-    if(!Number.isInteger(validar_m) && !Number.isInteger(validar_s)){
+
+    if(Number.isInteger(Number( validar_m)) != true && Number.isInteger(Number( validar_m)) != true ){
+      
+      
       audio_error.play();
       document.getElementById("mensaje2").innerHTML=`<div class="alert alert-warning alert-dismissible fade show" role="alert">
-      <strong>Aviso!</strong> Uno de los datos introducidos esta incorrecto; los datos no son numericos.
+      <strong>Aviso!</strong> Uno de los datos introducidos esta incorrecto.
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>`
 
     }else{
+      
       validar_m = Number( validar_m);
       validar_s = Number( validar_s);
       if(validar_m<0 ||  validar_m>60 || validar_s<0 ||  validar_s>60 ){
