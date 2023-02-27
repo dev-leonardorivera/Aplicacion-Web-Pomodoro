@@ -4,4 +4,4 @@ Esta aplicacion esta basada en la tecnica Pomodoro para mejorar el rendimiendo y
 HTML, CSS, Bootstrap 5, Javascript.
 
 ## DEMO 
-https://dev-leonardorivera.github.io/pomodoro/
+https://dev-leonardorivera.github.io/Aplicacion-Web-Pomodoro/
