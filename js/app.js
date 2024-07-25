@@ -9,6 +9,7 @@ let click_on = false;
 let m=25;
 let s=0;
 let time= null;
+let numScreen=3;
 const audio = new Audio();
 audio.src = "audio/click.mp3"
 const audio_alert = new Audio();
@@ -64,6 +65,7 @@ function backgroundRed(){
 }
 
 
+
 //------------------------------------------------------------  
 window.addEventListener( 'load', () => {
   let minuto=m;
@@ -100,6 +102,7 @@ const startQueries = () => {
 //------------------------------------------------------------  
 
   $( "#btn-dg" ).click(function() {
+    numScreen=3;
     clearInterval(time);
     $(".btn-start").removeClass("btn-start-on")
     document.getElementById("btn-inicio").innerText='COMENZAR'
@@ -107,6 +110,7 @@ const startQueries = () => {
     backgroundBlue2();
     m=15;
     s=0;
+    
     document.getElementById('reloj').textContent='15:00';
     document.getElementById('mensaje').textContent='¡Es hora de un descanso grande!';
     $( "#btn-dg" ).addClass('oction-active')
@@ -116,6 +120,7 @@ const startQueries = () => {
   });
 
   $( "#btn-dp" ).click(function() {
+    numScreen=2;
     clearInterval(time);
     $(".btn-start").removeClass("btn-start-on")
     document.getElementById("btn-inicio").innerText='COMENZAR'
@@ -134,6 +139,7 @@ const startQueries = () => {
   });
 
   $( "#btn-pomodoro" ).click(function() {
+    numScreen=3;
     clearInterval(time);
     $(".btn-start").removeClass("btn-start-on")
     document.getElementById("btn-inicio").innerText='COMENZAR'
@@ -150,8 +156,35 @@ const startQueries = () => {
   });
  
   $("#btn-inicio").click( function(){
-    
+  
     $(".btn-start").toggleClass("btn-start-on");
+    if(m<=0  && s<=0){
+      console.log('pasa por aqui')
+      switch (numScreen) {
+        case 1:
+          m=15;
+          s=0;
+          
+          document.getElementById('reloj').textContent='15:00';
+          document.getElementById('mensaje').textContent='¡Es hora de un descanso grande!';
+          break;
+        case 2:
+          m=5;
+          s=0;
+          document.getElementById('reloj').textContent='05:00';
+          document.getElementById('mensaje').textContent='¡Es hora de un pequeño descanso!';
+          break;
+        case 3:
+          m=25;
+          s=0;
+          document.getElementById('reloj').textContent='25:00';
+          document.getElementById('mensaje').textContent='¡Es hora de concentrarse!';
+          break;
+      
+        
+      }
+    }
+    
     if(click_on==false){
       document.getElementById("btn-inicio").innerText ='PAUSAR';
       click_on=true;
@@ -197,6 +230,7 @@ const startQueries = () => {
     }else{
       document.getElementById("btn-inicio").innerText='COMENZAR'
       click_on=false;
+      
       clearInterval(time);
 
     }
